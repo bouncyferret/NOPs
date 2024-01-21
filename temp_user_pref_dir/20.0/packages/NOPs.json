@@ -1,3 +1,4 @@
 {
+	"enable":true,
 	"hpath":"$HOUDINI_USER_PREF_DIR/../../"
 }

@@ -1,2 +1,4 @@
 otls/backup/
 __pycache__/
+temp_user_pref_dir/
+!NOPs.json
