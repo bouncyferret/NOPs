@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <toolshelf name="NOPs-dev" label="NOPs dev">
+    <memberTool name="auto_refresh_module"/>
+  </toolshelf>
+
+  <tool name="auto_refresh_module" label="Auto Refresh Py Module" icon="MISC_python">
+    <script scriptType="python"><![CDATA[from PySide2 import QtCore
+import importlib
+import hou
+import glob
+
+
+def reload(module):
+    m = importlib.import_module(module)
+    importlib.reload(m)
+
+
+nop_dir = hou.getenv("NOPS")
+_, moduleName = hou.ui.readInput(
+    "Module Name, to auto reload", buttons=("OK", "Cancel")
+)
+
+# Search for moduleName.py in nop_dir
+modulePath = glob.glob(nop_dir + "/**/" + moduleName + ".py")
+if modulePath:
+    print(f"Reloading {moduleName} module at file change:\n    {modulePath[0]}")
+    watcher = QtCore.QFileSystemWatcher([modulePath[0]], parent=hou.qt.mainWindow())
+    watcher.fileChanged.connect(lambda: reload(moduleName))
+]]></script>
+  </tool>
+</shelfDocument>
