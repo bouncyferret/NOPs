@@ -7,6 +7,7 @@
 
   <toolshelf name="NOPs-dev" label="NOPs dev">
     <memberTool name="auto_refresh_module"/>
+    <memberTool name="nops_shuffleAllPaneTabs"/>
   </toolshelf>
 
   <tool name="auto_refresh_module" label="Auto Refresh Py Module" icon="MISC_python">
@@ -21,17 +22,23 @@ def reload(module):
     importlib.reload(m)
 
 
-nop_dir = hou.getenv("NOPS")
-_, moduleName = hou.ui.readInput(
+nops_dir = hou.getenv("NOPS")
+_, module_name = hou.ui.readInput(
     "Module Name, to auto reload", buttons=("OK", "Cancel")
 )
 
-# Search for moduleName.py in nop_dir
-modulePath = glob.glob(nop_dir + "/**/" + moduleName + ".py")
-if modulePath:
-    print(f"Reloading {moduleName} module at file change:\n    {modulePath[0]}")
-    watcher = QtCore.QFileSystemWatcher([modulePath[0]], parent=hou.qt.mainWindow())
-    watcher.fileChanged.connect(lambda: reload(moduleName))
+# Search for module_name.py in nops_dir
+module_path = glob.glob(nops_dir + "/**/" + module_name + ".py")
+if module_path:
+    print(f"Reloading {module_name} module at file change:\n    {module_path[0]}")
+    watcher = QtCore.QFileSystemWatcher([module_path[0]], parent=hou.qt.mainWindow())
+    watcher.fileChanged.connect(lambda: reload(module_name))
 ]]></script>
+  </tool>
+
+  <tool name="nops_shuffleAllPaneTabs" label="Shuffle All Tabs" icon="COP2_shuffle">
+    <script scriptType="python"><![CDATA[import nops_desktop
+
+nop_desktop.ShuffleAllPanes()]]></script>
   </tool>
 </shelfDocument>
