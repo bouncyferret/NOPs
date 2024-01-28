@@ -1,4 +1,4 @@
-def delete_node(kwargs) -> None:
+def DeleteNode(kwargs) -> None:
     # this function displays an image and destroys node if node is listed in the destroyables
     import csv
     import os
