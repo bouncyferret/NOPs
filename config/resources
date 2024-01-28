@@ -1,0 +1,139 @@
+// Font sizes
+#define MEGAHUGE		17
+#define HUGE			13
+#define LARGE			11
+#define MEDIUM			10
+#define MEDIUM_SMALL		9
+#define SMALL			8
+#define TINY			7
+
+// <font name> [<bold|italic|bold-italic>] <size>
+
+DefaultFont:			Proportional MEDIUM
+
+HelpCardFont:            	Proportional MEDIUM
+
+InfoCardFont:			Fixed MEDIUM
+
+PaperFont:			Proportional SMALL
+
+NotifierFont:			Proportional MEDIUM
+
+NotifierHeadingFont:		Proportional Bold MEDIUM
+
+OpListFont:			Proportional MEDIUM
+OpListTitleFont:		Proportional MEDIUM
+
+VopInOutLabelFont:		Proportional SMALL
+
+SpreadsheetFont:		Fixed MEDIUM
+SpreadsheetTitleFont:		Proportional MEDIUM
+
+ListFont:			Proportional MEDIUM
+ListTitleFont:			Proportional MEDIUM
+
+ButtonFont:			Proportional MEDIUM
+
+LabelFont:			Proportional MEDIUM
+
+HeadingFont:			Proportional Bold MEDIUM
+
+HotkeyFont:			Proportional Italic MEDIUM
+
+TitleFont:			Proportional MEGAHUGE
+
+MenuFont:			Proportional LARGE
+
+InputSmallFont:			Fixed MEDIUM_SMALL
+InputFont:			Fixed MEDIUM
+
+DopeSheetFont:			Proportional MEDIUM_SMALL
+DopeSheetLargeFont:		Proportional LARGE
+
+OffDefaultParmFont:		Fixed Bold MEDIUM
+
+CompositorFont:			Proportional LARGE
+CompositorRulerFont:		Proportional TINY
+CompositorSmallFont:		Proportional MEDIUM
+CompositorSmallerFont:		Proportional SMALL
+CompositorInspectFont:		Fixed MEDIUM_SMALL
+
+TreeFont:			Proportional MEDIUM
+TreeFontBold:			Proportional Bold MEDIUM
+TreeFontItalic:			Proportional Italic MEDIUM
+TreeFontBoldItalic:		Proportional Bold-Italic MEDIUM
+
+PerfMonFont:			Proportional MEDIUM
+
+FinePrintFont:			Proportional TINY
+
+BoldFont:			Proportional Bold MEDIUM
+BoldFontLarge:			Proportional Bold LARGE
+
+TextareaFont			Fixed LARGE
+TextportFont			Fixed LARGE
+
+HandleFont			Proportional SMALL
+
+GraphFont			Fixed MEDIUM
+
+LadderFont			Proportional MEDIUM
+
+NetworkFont:			Proportional MEDIUM
+
+PaneTabFont:			Proportional MEDIUM_SMALL
+PaneTabNetFont:			Proportional Italic MEDIUM_SMALL
+PaneTabPinnedFont:		Proportional Bold MEDIUM_SMALL
+
+ShelfTabFont:			Proportional SMALL
+
+ShelfItemFont:			Proportional SMALL
+ShelfItemTinyFont:		Proportional TINY
+ShelfTextItemFont:		Proportional MEDIUM
+
+PathGadgetFont:			Proportional MEDIUM
+
+StateLabelFont:			Proportional Bold MEDIUM
+
+ViewportFont:			Proportional MEDIUM
+
+WorksheetLabelFont:		Black 16
+
+WorksheetPerfMonLabelFont:	Black 12
+
+ViewportTimeFont:		Black 20
+
+ViewportInfoFont:		Fixed MEDIUM
+
+ViewportInspectFont:		Fixed MEDIUM_SMALL
+
+ABrowserModeFont:		Proportional MEDIUM
+
+ABrowserLargeModeFont:		Proportional HUGE
+
+ABrowserMedHeaderFont:		Proportional Bold 12
+
+ABrowserVersionHeaderFont:	Proportional Bold 10
+
+ABrowserTooltipCategoryFont3:	Proportional Bold 7
+ABrowserTooltipCategoryFont4:	Proportional Bold 5
+
+ABrowserModeCategoryFont3:	Proportional Bold 8
+ABrowserModeCategoryFont4:	Proportional Bold 6
+
+ABrowserLargeModeCategoryFont3:	 Proportional Bold 20
+ABrowserLargeModeCategoryFont4:	 Proportional Bold 15
+
+OrboltSplashscreenFont:		Proportional Bold 10
+
+ViewerFlashMessageFont:		NetworkFont
+ViewerFlashMessageFontHeight:	0.3
+
+AnimBarLabelFont:               Proportional SMALL
+
+LeverSliderValueFont:           Fixed MEDIUM_SMALL
+LeverSliderThumbFont:           Proportional TINY
+
+// Volume of audio alerts
+AudioVolume:			0.75
+
