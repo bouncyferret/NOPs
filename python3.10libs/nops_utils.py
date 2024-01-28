@@ -1,8 +1,24 @@
 import hou
 from PySide2.QtCore import QTimer
+from typing import Callable
 
 
-def temporaryMessage(message, duration=4, severity=0):
+def ScheduleFunction(delay: float, func: Callable):
+    """
+    Schedule a function to be executed after a specified delay.
+
+    Args:
+        func (callable): The function to be executed.
+        delay (float, optional): The delay in seconds before executing the function. Defaults to 5.
+
+    Returns:
+        None
+    """
+    timer = QTimer(hou.qt.mainWindow())
+    timer.singleShot(int(delay * 1000), func)
+
+
+def TemporaryMessage(message: str, duration: float = 4, severity: int = 0):
     """
     Display a temporary message in the Houdini status bar.
 
@@ -23,23 +39,5 @@ def temporaryMessage(message, duration=4, severity=0):
         hou.ui.setStatusMessage(message, severity=hou.severityType.Warning)
     elif severity == 2:
         hou.ui.setStatusMessage(message, severity=hou.severityType.Error)
-    timer = QTimer()
-    timer.singleShot(duration * 1000, lambda: hou.ui.setStatusMessage(""))
-    timer.start()
 
-
-# TODO This function is has not been tested.
-def scheduleFunction(func, delay=5):
-    """
-    Schedule a function to be executed after a specified delay.
-
-    Args:
-        func (callable): The function to be executed.
-        delay (float, optional): The delay in seconds before executing the function. Defaults to 5.
-
-    Returns:
-        None
-    """
-    timer = QTimer()
-    timer.singleShot(int(delay * 1000), func)
-    timer.start()
+    ScheduleFunction(duration, lambda: hou.ui.setStatusMessage(""))

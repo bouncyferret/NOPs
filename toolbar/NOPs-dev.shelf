@@ -8,6 +8,7 @@
   <toolshelf name="NOPs-dev" label="NOPs dev">
     <memberTool name="auto_refresh_module"/>
     <memberTool name="nops_shuffleAllPaneTabs"/>
+    <memberTool name="testing"/>
   </toolshelf>
 
   <tool name="auto_refresh_module" label="Auto Refresh Py Module" icon="MISC_python">
@@ -40,5 +41,11 @@ if module_path:
     <script scriptType="python"><![CDATA[import nops_desktop
 
 nop_desktop.ShuffleAllPanes()]]></script>
+  </tool>
+
+  <tool name="testing" label="Testing" icon="MISC_bug">
+    <script scriptType="python"><![CDATA[import nops_utils
+nops_utils.ScheduleFunction(50, lambda:print("gg"))
+nops_utils.TemporaryMessage("nuub", 1, 1)]]></script>
   </tool>
 </shelfDocument>
