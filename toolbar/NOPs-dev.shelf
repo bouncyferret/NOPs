@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <toolshelf name="NOPs-dev" label="NOPs dev">
+    <memberTool name="auto_refresh_module"/>
+    <memberTool name="nops_shuffleAllPaneTabs"/>
+  </toolshelf>
+
+  <tool name="auto_refresh_module" label="Auto Refresh Py Module" icon="MISC_python">
+    <script scriptType="python"><![CDATA[from PySide2 import QtCore
+import importlib
+import hou
+import glob
+
+
+def reload(module):
+    m = importlib.import_module(module)
+    importlib.reload(m)
+
+
+nops_dir = hou.getenv("NOPS")
+_, module_name = hou.ui.readInput(
+    "Module Name, to auto reload", buttons=("OK", "Cancel")
+)
+
+# Search for module_name.py in nops_dir
+module_path = glob.glob(nops_dir + "/**/" + module_name + ".py")
+if module_path:
+    print(f"Reloading {module_name} module at file change:\n    {module_path[0]}")
+    watcher = QtCore.QFileSystemWatcher([module_path[0]], parent=hou.qt.mainWindow())
+    watcher.fileChanged.connect(lambda: reload(module_name))
+]]></script>
+  </tool>
+
+  <tool name="nops_shuffleAllPaneTabs" label="Shuffle All Tabs" icon="COP2_shuffle">
+    <script scriptType="python"><![CDATA[import nops_desktop
+
+nop_desktop.ShuffleAllPanes()]]></script>
+  </tool>
+</shelfDocument>
