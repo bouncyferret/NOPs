@@ -1,9 +1,26 @@
 import hou
 from PySide2.QtCore import QTimer
-from typing import Callable
+from typing import Callable, Dict, Any
+import toml
 
 
-def ScheduleFunction(delay: float, func: Callable):
+def LoadConfig() -> Dict[str, Any] | None:
+    """
+    Load nops_config.toml as a dict :)
+
+    Returns:
+        Dict
+        None - if missing $NOPS
+    """
+    configPath = hou.getenv("NOPS", None)
+    if not configPath:
+        return None
+
+    with open(f"{configPath}/nops_config.toml") as file:
+        return toml.loads(file.read())
+
+
+def ScheduleFunction(delay: float, func: Callable) -> None:
     """
     Schedule a function to be executed after a specified delay.
 
@@ -18,7 +35,7 @@ def ScheduleFunction(delay: float, func: Callable):
     timer.singleShot(int(delay * 1000), func)
 
 
-def TemporaryMessage(message: str, duration: float = 4, severity: int = 0):
+def TemporaryMessage(message: str, duration: float = 4, severity: int = 0) -> None:
     """
     Display a temporary message in the Houdini status bar.
 
