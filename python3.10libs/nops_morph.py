@@ -1,6 +1,7 @@
 import numpy as np
 from typing import List
 import hou
+import nops_rand as nr
 
 def Morph(kwargs : dict) -> None:
 
@@ -10,7 +11,7 @@ def Morph(kwargs : dict) -> None:
 
     node.setUserData('nodeshape',nodeshape)
 
-    nprlist: List = np.random.default_rng(seed=node.sessionId()).random((3,)).tolist()
+    nprlist: List = nr.GetRandomList()
 
     color: hou.Color = hou.Color(nprlist)
 
