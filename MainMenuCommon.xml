@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mainMenu>
+  <menuBar>
+    <subMenu id="my_submenu">
+      <label>NOPs</label>
+
+            <scriptItem id="nops_test">
+                <label>NOPs Test</label>
+                <scriptCode>
+                    <![CDATA[
+print("test")
+                    ]]>
+                </scriptCode>
+            </scriptItem>
+            
+            <separatorItem id="nops_sep1"/>
+
+
+    </subMenu>
+  </menuBar>
+</mainMenu>
