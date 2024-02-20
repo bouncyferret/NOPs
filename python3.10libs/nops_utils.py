@@ -1,23 +1,36 @@
 import hou
+import os
+import json
 from PySide2.QtCore import QTimer
 from typing import Callable, Dict, Any
-import toml
 
 
-def LoadConfig() -> Dict[str, Any] | None:
-    """
-    Load nops_config.toml as a dict :)
+def LoadDifficulty() -> float:
 
-    Returns:
-        Dict
-        None - if missing $NOPS
-    """
-    configPath = hou.getenv("NOPS", None)
-    if not configPath:
-        return None
+    nops_path: str = hou.getenv("NOPS")
+    prefs_path: str = os.path.join(nops_path,"nops_prefs.json")
 
-    with open(f"{configPath}/nops_config.toml") as file:
-        return toml.loads(file.read())
+    with open(prefs_path,'r') as file:
+
+        prefs_dict: dict = json.load(file)
+        
+        difficulty_index: int = prefs_dict["difficulty"]
+
+        print(difficulty_index)
+
+        match difficulty_index:
+
+            case 0:
+                return .1
+            case 1:
+                return .25
+            case 2:
+                return .6
+            case 3:
+                return .9
+        
+        
+    
 
 
 def ScheduleFunction(delay: float, func: Callable) -> None:

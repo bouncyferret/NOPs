@@ -1,4 +1,5 @@
-import random
+import nops_rand as nr
+import nops_utils as nut
 from PySide2.QtCore import QTimer
 import time
 
@@ -20,19 +21,9 @@ def DisconnectWire(kwargs : dict) -> None:
     
     node: hou.Node = kwargs["node"]
     
-    id: int = node.sessionId()
+    probability: float = nut.LoadDifficulty()    
     
-    random.seed(id+int(time.time()))
-
-    rng: int = random.randint(1,100)
-    
-    #probability could be driven by env var
-    #user chooses difficulty
-    #harder == higher chance of happening
-    
-    probability: int = 3
-    
-    if rng%probability==0:
+    if nr.RandomTrigger(probability):
         
         print("triggered")
         
