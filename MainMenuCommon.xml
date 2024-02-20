@@ -4,11 +4,12 @@
     <subMenu id="my_submenu">
       <label>NOPs</label>
 
-            <scriptItem id="nops_test">
-                <label>NOPs Test</label>
+            <scriptItem id="nops_set_preferences">
+                <label>NOPs Set Difficulty Level</label>
                 <scriptCode>
                     <![CDATA[
-print("test")
+import nops_prefchooser
+nops_prefchooser.NopsPreferences(hou.qt.mainWindow()).show()
                     ]]>
                 </scriptCode>
             </scriptItem>
