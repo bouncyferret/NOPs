@@ -23,9 +23,7 @@ def DisconnectWire(kwargs : dict) -> None:
     
     probability: float = nut.LoadDifficulty()    
     
-    if nr.RandomTrigger(probability):
-        
-        print("triggered")
+    if nr.RandomTrigger(probability*0.1): #decreasing chances of happening as it becomes too annoying
         
         timer: QTimer = QTimer()
         

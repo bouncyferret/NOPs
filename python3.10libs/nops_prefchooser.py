@@ -17,16 +17,17 @@ class NopsPreferences(QtWidgets.QDialog):
 
         nops_path: str = hou.getenv("NOPS")
         prefs_path: str = os.path.join(nops_path,"nops_prefs.json")
+        prefs_data: dict = dict()    
         
+        with open(prefs_path,"r") as file:
+            
+            prefs_data = json.load(file)                        
+            
+        prefs_data["difficulty"]: int = self.menu.currentIndex() 
+
         with open(prefs_path,"w") as file:
             
-            #prefs_data: dict = json.load(file)    
-            
-            prefs_data = dict()
-            
-            prefs_data["difficulty"]: int = self.menu.currentIndex() 
-            
-            json.dump(prefs_data,file)
+            json.dump(prefs_data,file,indent=4)
         
         self.Close()
         
