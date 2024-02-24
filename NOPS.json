@@ -1,0 +1,20 @@
+{
+	
+	"enable": "true",
+	"env": [
+		{
+			"NOPS": "/path/to/nops/source"
+		},
+		{
+			"HOUDINI_SPLASH_FILE": "$NOPS/media/gatto1.jpg"
+		},
+		{
+			"HOUDINI_SPLASH_MESSAGE": "Have Fun !!"
+		}
+		
+	],
+	"path": "$NOPS",
+	
+	
+	
+}
