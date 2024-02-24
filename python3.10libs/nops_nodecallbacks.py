@@ -1,5 +1,6 @@
 from typing import Callable, Tuple, List
 import nops_rand as nr
+import nops_utils as nut
 import hou
 
 def AddNodeCallbacks(kwargs: dict) -> None:
@@ -22,11 +23,15 @@ def AddNodeCallbacks(kwargs: dict) -> None:
 				context: hou.node = kwargs['node'].parent()
 			except:
 				return
-			for i in range(8):
-				for j in range(8):
+			
+			difficulty_index: int = nut.LoadDifficultyIndex()
+			number_range: int = 1 + (difficulty_index * 2)
+			
+			for i in range(number_range):
+				for j in range(number_range):
 					if nr.RandomTrigger(.05,i+j): # adding some more filtering here
-						pos: hou.Vector2 = hou.Vector2((i,j))
-						node: hou.Node = context.createNode('null',f"box_{i}_{j}")
+						pos: hou.Vector2 = nr.GetRandomPosition(seed=i+j)
+						node: hou.Node = context.createNode('null',f"YourNewFriend_{i}_{j}")
 						node.setPosition(pos)
 				
 
