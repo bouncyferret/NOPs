@@ -1,7 +1,7 @@
 # Global UI controls
 
 # Sizes may be Small, Compact, Normal, Large, or Extra Large.
-colors.scheme := "Houdini Light";
+colors.scheme := "NOPs Light";
 general.filechooserstyle.menu := "Houdini Chooser Only";
 general.ui.icon_size := "Large";
 general.ui.scale := 1.4;

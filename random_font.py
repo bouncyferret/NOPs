@@ -2,14 +2,14 @@ import random
 from typing import List, Dict, Any, Match
 import re
 import os
-import toml
+import json
 
 # if NOPS is not in env -> assume that it's executed from NOPs root dir
 nopsPath: str = os.getenv("NOPS", ".")
 
 # load config to check if random_fonts is enabled
-with open(f"{nopsPath}/nops_config.toml") as file:
-    nopsConfig: Dict[str, Any] = toml.loads(file.read())
+with open(f"{nopsPath}/nops_prefs.json") as file:
+    nopsConfig: Dict[str, Any] = json.loads(file.read())
 
 if "randomize_fonts" in nopsConfig:
     nopsRandomizeFonts: bool = nopsConfig["randomize_fonts"]
@@ -30,7 +30,7 @@ if nopsRandomizeFonts:
 
     newConfig: List[str] = []
     for config in templateFile.splitlines():
-        match: Match[str] = re.search(r"Proportional|Fixed|Black", config)
+        match = re.search(r"Proportional|Fixed|Black", config)
         if match:
             newFont: str = random.choice(fontList)
             config = config.replace(match.group(), newFont)
