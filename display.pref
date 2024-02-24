@@ -574,7 +574,7 @@
     vfogquality ( 0 )
     dofbokehaspect ( 1 )
     dofbokehboost ( 1 )
-    uvmapfile ( $NOPs/media/sillyuvmap.jpg )
+    uvmapfile ( $NOPS/media/sillyuvmap.jpg )
     uvmapscale ( 3 )
     defmaterialtype ( 0 )
     defmatcapfile ( MatCap/OilClay.pic )
