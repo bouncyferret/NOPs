@@ -34,3 +34,10 @@ def GetRandomPosition(seed: int = 6, scale: float = 25.0) -> hou.Vector2:
 
     seed: int = GetRandomSeed(seed)
     return hou.Vector2([(elem-.5) * scale for elem in GetRandomList(2)]) 
+
+
+def ChooseFromStringArray(array: tuple) -> str:
+
+    array_length: int = len(array)
+    random.seed(GetRandomSeed())
+    return random.randint(0,array_length-1)

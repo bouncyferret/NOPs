@@ -7,18 +7,7 @@ from typing import Callable, Dict, Any
 
 def LoadDifficulty() -> float:
 
-    nops_path: str = hou.getenv("NOPS")
-    prefs_path: str = os.path.join(nops_path,"nops_prefs.json")
-
-    with open(prefs_path,'r') as file:
-
-        prefs_dict: dict = json.load(file)
-        
-        difficulty_index: int = prefs_dict["difficulty"]
-
-        print(difficulty_index)
-
-        match difficulty_index:
+        match LoadDifficultyIndex():
 
             case 0:
                 return .1
@@ -29,7 +18,21 @@ def LoadDifficulty() -> float:
             case 3:
                 return .9
         
+
+def LoadDifficultyIndex() -> int:         
+
+    
+    nops_path: str = hou.getenv("NOPS")
+    prefs_path: str = os.path.join(nops_path,"nops_prefs.json")
+    difficulty_index: int = 0
+    with open(prefs_path,'r') as file:
+
+        prefs_dict: dict = json.load(file)
         
+        difficulty_index = prefs_dict["difficulty"]
+
+    return difficulty_index
+
     
 
 
