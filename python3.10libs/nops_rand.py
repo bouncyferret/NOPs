@@ -7,11 +7,13 @@ import hou
 
 #utility functions to generate random numbers
 
-def GetRandomSeed(seed:int = 9) -> int:
+def GetRandomSeed(seed:int = 9, slow:int = 10) -> int:
 
+    # increasing slow means slower change in seed value
+    
     nanoseconds: int = time.monotonic_ns()
     
-    now:int = nanoseconds % 10 
+    now:int = nanoseconds % slow
 
     return secrets.randbits(now + random.randint(1,6) + seed)
 
@@ -36,8 +38,8 @@ def GetRandomPosition(seed: int = 6, scale: float = 25.0) -> hou.Vector2:
     return hou.Vector2([(elem-.5) * scale for elem in GetRandomList(2)]) 
 
 
-def ChooseFromStringArray(array: tuple) -> str:
+def ChooseFromStringArray(array: tuple, slow:int = 10) -> str:
 
     array_length: int = len(array)
-    random.seed(GetRandomSeed())
+    random.seed(GetRandomSeed(slow=slow))
     return random.randint(0,array_length-1)
