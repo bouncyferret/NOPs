@@ -8,7 +8,7 @@ def Morph(kwargs : dict) -> None:
 
     node: hou.Node = kwargs['node']
     
-    nodeshapes: tuple[str] = ('cop','_wbt_tux','_wbt_helix','_wbt_rustacean','_wbt_mustacheB')
+    nodeshapes: tuple[str] = ('cop','_wbt_tux','_wbt_mandelbrotB','_wbt_helix','_wbt_rustacean')
 
     difficulty_index: int = nut.LoadDifficultyIndex()
 
