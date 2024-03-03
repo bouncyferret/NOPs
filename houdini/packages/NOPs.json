@@ -1,0 +1,18 @@
+{
+	"enable": true,
+	"hpath": "$NOPS",
+	"env": [
+		{
+			"HOUDINI_ANONYMOUS_STATISTICS": 0
+		},
+		{
+			"HOUDINI_NO_START_PAGE_SPLASH": 1
+		},
+		{
+			"HOUDINI_SPLASH_FILE": "$NOPS/media/gatto1.jpg"
+		},
+		{
+			"HOUDINI_SPLASH_MESSAGE": "Have Fun !!"
+		}
+	]
+}
