@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <toolshelf name="nops" label="NOPS">
+    <memberTool name="love"/>
+  </toolshelf>
+
+  <tool name="love" label="LOVE" icon="hicon:/SVGIcons.index?SOP_unix.svg">
+    <toolMenuContext name="network">
+      <contextNetType>SOP</contextNetType>
+      <contextNetType>CHOP</contextNetType>
+      <contextNetType>ROP</contextNetType>
+      <contextNetType>SHOP</contextNetType>
+      <contextNetType>COP2</contextNetType>
+      <contextNetType>VOP</contextNetType>
+      <contextNetType>VOPNET</contextNetType>
+      <contextNetType>DOP</contextNetType>
+      <contextNetType>TOP</contextNetType>
+      <contextNetType>LOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>NOPS</toolSubmenu>
+    <script scriptType="python"><![CDATA[import math
+
+context = node = kwargs['pane'].currentNode().parent()
+
+a = 16
+b = 14.5
+c = 5.6
+d = 2
+iterations = 100
+
+start = -10.0
+end = 10.0
+
+for i in range(iterations):
+    t = start + i * end / float(iterations)
+    x = a * math.sin(t) * math.sin(t) * math.sin(t)
+    y = b * math.cos(t) - c * math.cos(2*t) - d * math.cos(3*t) - math.cos(4 * t)
+    
+    pos = hou.Vector2((x,y))
+    newnode = context.createNode('null',f"love{i}",force_valid_node_name=True)
+    newnode.setPosition(pos)
+    ]]></script>
+  </tool>
+</shelfDocument>
