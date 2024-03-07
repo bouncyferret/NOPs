@@ -2,7 +2,8 @@ import random
 from typing import Tuple, List
 import hou
 from time import sleep
-
+import nops_rand as nra
+import nops_utils as nut
 
 def ShufflePanes(pane_tabs: Tuple[hou.PaneTab]):
     # BUG python panel "ConstraintBrowser" causes issues
@@ -46,3 +47,10 @@ def ShuffleVisiblePanes():
 def ShuffleAllPanes():
     pane_tabs = hou.ui.paneTabs()
     ShufflePanes(pane_tabs)
+
+def ResetToStartDesktop() -> None:
+
+    difficulty: float = nut.LoadDifficulty() * 0.025
+
+    if nra.RandomTrigger(difficulty):
+        hou.hscript("desk set NOPS")
