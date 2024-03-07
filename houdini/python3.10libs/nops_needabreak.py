@@ -6,7 +6,7 @@ from typing import List
 
 def AnnoyingCook() -> None:
 
-    hard: float = nut.LoadDifficulty()
+    hard: float = nut.LoadDifficulty() * 0.25
     
     if not nr.RandomTrigger(hard):
         
