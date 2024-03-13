@@ -3,7 +3,7 @@ CanvasPromptFontSize:		0.2
 CanvasMinGridSpacing:		0.2
 CanvasGridPointSize:		0.03
 CanvasFlashMessageFont:		NetworkFont
-CanvasFlashMessageFontSize:	0.4 // adjusted
+CanvasFlashMessageFontSize:	0.33 // adjusted
 
 PaletteMarginInches:		    0.04 // adjusted
 ColorPaletteCellMarginInches:	0.01
@@ -14,15 +14,15 @@ BackgroundImageControlSize:	1.0
 BackgroundImageControlHMargin:	0.2
 BackgroundImageControlVMargin:	0.3
 
-GraphOverlayTextHMarginInches:	0.2
-GraphOverlayTextVMarginInches:	0.0
-GraphOverlayTextAlpha:		0.55
-GraphOverlayLeftFont:		NetworkFont
-GraphOverlayLeftFontSizeInches:	0.35
-GraphOverlayCenterFont:		NetworkFont
+GraphOverlayTextHMarginInches:	0.05
+GraphOverlayTextVMarginInches:	-0.05
+GraphOverlayTextAlpha:		0.65
+GraphOverlayLeftFont:		NetworkFontTitle
+GraphOverlayLeftFontSizeInches:	0.20
+GraphOverlayCenterFont:		NetworkFontCenter
 GraphOverlayCenterFontSizeInches: 0.25
-GraphOverlayRightFont:		BoldFont
-GraphOverlayRightFontSizeInches: 0.35
+GraphOverlayRightFont:		NetworkFontTitle
+GraphOverlayRightFontSizeInches: 0.20
 
 GraphFootprintMinRadiusInches:	0.3
 GraphFootprintMinOverviewRadiusInches:	0.2
@@ -173,7 +173,7 @@ GraphLargeBadgeStackLeftShift:	-0.6
 GraphLargeBadgeStackTopShift:		0.0
 
 // FOR LOOPS AND SUCH
-GraphHullOffset:		0.3 // adjusted
+GraphHullOffset:		0.35 // adjusted
 GraphHullNestedOffset:	0.15
 GraphHullAlpha:			0.2
 

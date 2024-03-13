@@ -25,7 +25,7 @@ PaperFont:			Proportional SMALL
 
 NotifierFont:			Proportional MEDIUM
 
-NotifierHeadingFont:		Proportional Bold MEDIUM
+NotifierHeadingFont:		Proportional Bold SMALL
 
 OpListFont:			Proportional MEDIUM
 OpListTitleFont:		Proportional MEDIUM
@@ -86,6 +86,8 @@ GraphFont			Fixed MEDIUM
 LadderFont			Proportional MEDIUM
 
 NetworkFont:			Proportional MEDIUM
+NetworkFontCenter           LuckiestGuy-Regular MEDIUM
+NetworkFontTitle:			ComicNeue-Bold Bold MEDIUM
 
 PaneTabFont:			Proportional MEDIUM_SMALL
 PaneTabNetFont:			Proportional Italic MEDIUM_SMALL

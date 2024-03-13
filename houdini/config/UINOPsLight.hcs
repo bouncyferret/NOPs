@@ -1,9 +1,9 @@
 Scheme: NOPs Light
 
+// Color Palette
 #include "NOPsLightColors.inc"
 // #include "NodeGraphLight.inc"
 
-// Color Palette
 #include "NodeGraphNOPsDark.inc"
 
 #define DRKBASECLR		UI_2
@@ -383,11 +383,11 @@ GroupHeaderDisabled3:   	UI
 GroupHeaderDisabledTop3:	UI
 GroupBody3:             	UI
 
-GroupLight:             FCY
+GroupLight:             UI_3
 
 // HDA save prompt
 CreateAssetScope: 		FBL // blue
-CreateAssetAuthor: 		FCY // cyan
+CreateAssetAuthor: 		TEXT // cyan
 CreateAssetBranch: 		FGR // green
 CreateAssetBasename: 	FYE // yellow
 CreateAssetVersion: 	FMA // pink
@@ -636,7 +636,7 @@ BorderLight:	BG
 BorderDark:		DRKBORDER
 
 AssetBannerBackground:			UI
-AssetUpdateStatusBackground:	0.19 0.28 0.38
+AssetUpdateStatusBackground:	UI_2
 AssetUpdateStatusText:			WHITE
 OrboltSplashscreenProgressbar:	0.19 0.28 0.38
 

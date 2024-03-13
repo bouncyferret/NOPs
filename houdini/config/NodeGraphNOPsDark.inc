@@ -2,15 +2,15 @@
 
 PaletteBackground:	UI_2
 PaletteSelected:	YELLOW
-ShapePaletteShape:	TX
+ShapePaletteShape:	TX_2
 
 BackgroundImageLocate:		WHITE
 BackgroundImageBorder:		YELLOW
 BackgroundImageBrightness:	YELLOW
 BackgroundImageLink:		GREY(0.8)
 
-GraphOverlayLeftText:		0.2 0.9 0.9
-GraphOverlayCenterText:		TX_2
+GraphOverlayLeftText:     FBL_2
+GraphOverlayCenterText:		TX_3
 GraphOverlayRightText:		FOR_2
 
 GraphBackground:			UI
@@ -36,7 +36,7 @@ GraphNetworkBoxNameText:        #76A8E1
 GraphIndirectText:              TX
 GraphIndirectTextDark:          BG
 
-GraphItemBorder:		BLACK
+GraphItemBorder:		BG
 GraphMinimizeButton:	GREY(0.8)
 
 GraphTemplateFlag:				FMA
@@ -77,7 +77,7 @@ GraphSopRestGeometry:	0.584   0.776   1.0
 GraphSopCapturePose:	0.6     0.6     0.6
 GraphSopAnimatedPose:	1.0     0.725   0.0
 
-GraphConnector:			    TX
+GraphConnector:			    TX_2
 GraphConnectorLabel:    TX
 GraphConnectorError:    FRE
 GraphCop2MaskInput:	    0.50 0.80 0.50

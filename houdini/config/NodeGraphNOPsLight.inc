@@ -24,7 +24,7 @@ GraphGridPoints:		GREY(0.8)
 
 GraphNameText:			BLACK
 GraphNodeTypeText:		GREY(0.25)
-GraphCommentText:		#32747D
+GraphCommentText:		BLACK
 GraphDescriptiveNameText:	#1D3D51
 GraphContextOptionDepsText:	#32747D
 GraphLopLastModifiedPrimText:	#32747D
