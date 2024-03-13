@@ -10,7 +10,7 @@ def networkEditorTitleLeft(editor):
         difficulties: List[str] = ["Ouch !","Very Ouch !", "Nightmare !", "Traumatize me !"]
         index: int = nut.LoadDifficultyIndex()
         
-        title = f"Pain level = {difficulties[index]}\r Node Count = {len([n for n in hou.node('/').allSubChildren()])}"
+        title = f"Pain level: {difficulties[index]}\r\nNode Count: {len([n for n in hou.node('/').allSubChildren()])}"
         pwd = editor.pwd()
         playerparm = pwd.parm('isplayer')
         if playerparm is not None and playerparm.evalAsInt() != 0:
