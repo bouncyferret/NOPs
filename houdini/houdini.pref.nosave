@@ -1,2 +1,7 @@
 general.desk.val := "NOPS";
+general.panecoloring.val := 1;
+general.audionotification_errors.val := 1;
+general.audionotification_messages.val := 1;
+general.audionotification_questions.val := 1;
+general.audionotification_warnings.val := 1;
 
