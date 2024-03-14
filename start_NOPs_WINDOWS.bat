@@ -6,7 +6,7 @@ setlocal enabledelayedexpansion
 set SCRIPT_DIR=%~dp0
 set NOPS=%SCRIPT_DIR%/houdini
 set HOUDINI_PACKAGE_DIR=%NOPS%\packages
-set HOUDINI_USER_PREF_DIR=%NOPS%\temp_user_pref_dir\__HVER__
+set HOUDINI_USER_PREF_DIR=%SCRIPT_DIR%\temp_user_pref_dir\__HVER__
 
 REM Set the initial highest version number to 0
 set "highestVersion=0"
