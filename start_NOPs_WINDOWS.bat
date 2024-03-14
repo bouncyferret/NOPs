@@ -1,6 +1,6 @@
 @echo off
-set HOUDINI_INSTALL_ROOT = "C:\Program Files\Side Effects Software"
-
+set HOUDINI_INSTALL_ROOT=C:\Program Files\Side Effects Software
+@REM !NO SPACES BETWEEN = and PATH!
 setlocal enabledelayedexpansion
 
 set SCRIPT_DIR=%~dp0
@@ -14,6 +14,7 @@ REM Loop through all the directories in the specified path
 for /d %%d in ("!HOUDINI_INSTALL_ROOT!\Houdini 20.*") do (
     REM Get the version number from the last *.num in directory name
     set "version=%%~nxd"
+    @REM echo !version!
     REM Remove the "Houdini 20.0." prefix
     set "version=!version:Houdini 20.0.=!"
     REM Compare the version number with the current highest version
