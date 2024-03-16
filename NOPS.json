@@ -3,6 +3,9 @@
 	"hpath": "$NOPS",
 	"env": [
 		{
+			"NOPS": "/path/to/NOPs/houdini/"
+		},
+		{
 			"HOUDINI_SPLASH_FILE": "$NOPS/media/gatto1.jpg"
 		},
 		{
