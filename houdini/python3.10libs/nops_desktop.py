@@ -5,6 +5,7 @@ from time import sleep
 import nops_rand as nra
 import nops_utils as nut
 
+
 def ShufflePanes(pane_tabs: Tuple[hou.PaneTab]):
     # BUG python panel "ConstraintBrowser" causes issues
     # BUG sometimes I get hou.PathPaneTab or hou.Pane hou.ObjectWasDeleted errors
@@ -48,8 +49,20 @@ def ShuffleAllPanes():
     pane_tabs = hou.ui.paneTabs()
     ShufflePanes(pane_tabs)
 
-def ResetToStartDesktop() -> None:
 
+def scheduleShuffleVisiblePanes1():
+    # print("Shuffling panes 01")
+    ShuffleVisiblePanes()
+    nut.ScheduleFunction(60.0, scheduleShuffleVisiblePanes2)
+
+
+def scheduleShuffleVisiblePanes2():
+    # print("Shuffling panes 02")
+    ShuffleVisiblePanes()
+    nut.ScheduleFunction(90.0, scheduleShuffleVisiblePanes1)
+
+
+def ResetToStartDesktop() -> None:
     difficulty: float = nut.LoadDifficulty() * 0.025
 
     if nra.RandomTrigger(difficulty):
