@@ -4,7 +4,7 @@ import hou
 import nops_rand as nr
 import nops_utils as nut
 
-def Morph(kwargs : dict) -> None:
+def Morph(kwargs: dict) -> None:
 
     node: hou.Node = kwargs['node']
     
@@ -23,3 +23,14 @@ def Morph(kwargs : dict) -> None:
     color: hou.Color = hou.Color(nprlist)
 
     node.setColor(color) 
+
+def Hide(kwargs: dict) -> None:
+
+    node: hou.Node = kwargs['node']
+
+    if not node.isHidden():
+
+        probability: float = nut.LoadDifficulty()
+
+        if nr.RandomTrigger(probability):
+            node.hide(True)
