@@ -4,6 +4,7 @@ def DeleteNode(kwargs) -> None:
     import os
     import hou
     import time
+    import nops_rand as nr
     from PySide2.QtCore import QTimer
     from typing import Callable,Tuple,List
 
@@ -21,9 +22,11 @@ def DeleteNode(kwargs) -> None:
         
         img.setRect(hou.BoundingRect(2,2,size[0],size[1]))
         
-        img.setRelativeToPath(node.path())  
-                                                        
-        img.setPath('$SIDEFXLABS/misc/stickers/Emoji/SIDEFX_CUSTOM_EMBLEMS 08.png')
+        img.setRelativeToPath(node.path())
+
+        random_index: int = nr.ChooseFromStringArray((0,0,0))
+                                                          
+        img.setPath(f"$NOPS/media/logoNOPS{random_index}.jpeg")
                     
         b_img.append(img) 
 
@@ -57,7 +60,7 @@ def DeleteNode(kwargs) -> None:
         if node.type().name() in list_banned_nodes:
             
             LaunchTimer(2,AddBackgroundImage)
-            LaunchTimer(3,KillNode)
+            LaunchTimer(10,KillNode)
             
         
 
