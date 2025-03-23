@@ -1,0 +1,257 @@
+// flexoki colors
+UI:    0.9019607843137255  0.8941176470588236   0.8509803921568627
+UI_2:  0.8549019607843137  0.8470588235294118   0.807843137254902
+UI_3:  0.807843137254902   0.803921568627451    0.7647058823529411
+BG:    1.0                 0.9882352941176471   0.9411764705882353
+BG_2:  0.9490196078431372  0.9411764705882353	0.8980392156862745
+TX:    0.06274509803921569 0.058823529411764705 0.058823529411764705
+TX_2:  0.43529411764705883 0.43137254901960786  0.4117647058823529
+TX_3:  0.7176470588235294  0.7098039215686275   0.6745098039215687
+PAPER: 1.0                 0.9882352941176471   0.9411764705882353
+
+FRE:   0.6862745098039216  0.18823529411764706  0.1607843137254902
+FRE_2: 0.8196078431372549  0.30196078431372547  0.2549019607843137
+FOR:   0.7372549019607844  0.3215686274509804   0.08235294117647059
+FOR_2: 0.8549019607843137  0.4392156862745098   0.17254901960784313
+FYE:   0.6784313725490196  0.5137254901960784   0.00392156862745098
+FYE_2: 0.8156862745098039  0.6352941176470588   0.08235294117647059
+FGR:   0.4                 0.5019607843137255   0.043137254901960784
+FGR_2: 0.5294117647058824  0.6039215686274509   0.2235294117647059
+FCY:   0.1411764705882353  0.5137254901960784   0.4823529411764706
+FCY_2: 0.22745098039215686 0.6627450980392157   0.6235294117647059
+FCY_3: 0.2980392156862745  0.8705882352941177   0.8196078431372549
+FBL:   0.12549019607843137 0.3686274509803922   0.6509803921568628
+FBL_2: 0.2627450980392157  0.5215686274509804   0.7450980392156863
+FPU:   0.3686274509803922  0.25098039215686274  0.615686274509804
+FPU_2: 0.5450980392156862  0.49411764705882355  0.7843137254901961
+FMA:   0.6274509803921569  0.1843137254901961   0.43529411764705883
+FMA_2: 0.807843137254902   0.36470588235294116  0.592156862745098
+
+// VIEW_BG_TOP: 0.6313725490196078 0.7686274509803922 0.7490196078431373
+// VIEW_BG_BOT: 0.33725490196078434 0.4823529411764706 0.6196078431372549
+VIEW_BG_BOT: 0.3411764705882353 0.42745098039215684 0.5137254901960784
+VIEW_BG_TOP: 0.6823529411764706 0.7529411764705882 0.7411764705882353
+BackgroundColor:	            0.58 0.33 0.013 # background color 
+BackgroundBottomColor:	        0.18 0.05 0.04  # background color at bottom of view
+ViewMaskOverlayColor:	@BG_2	# view mask overlay
+CameraMaskColor:		@BG		# camera mask
+CameraOverlayColor:		1.00 1.00 1.00	# camera overlay
+LockedCameraMaskColor:	@FRE_2	# camera locked color
+
+GridColor:          @TX_2		# reference plane
+GridLineAlpha:		ALPHA 0.40	# alpha of ref plane grid lines
+GridLineFadedAlpha:	ALPHA 0.20	# alpha of faded ref plane grid lines
+
+GridXRulerColor:	@FRE_2	# reference grid x ruler color
+GridYRulerColor:	@FGR_2	# reference grid y ruler color
+GridZRulerColor:	@FBL_2 	# reference grid z ruler color
+
+#h20
+GridRulerAlpha:			ALPHA 0.5
+GridRulerFadedAlpha:	ALPHA 0.2
+
+PointColor:			@FCY_2	# non-selected points and point info
+WireOverColor:		1.0 0.5 0		# color of wires in Wire Shaded modes
+GhostFillColor:		0.54 0.55 0.55	# hidden-line ghost fill
+FillSelectionAlpha:	        ALPHA 0.5	# Blend factor for shading&select color
+FillSelectionWireOverAlpha: ALPHA 0.20	# Blend factor for shading&select color
+
+BackfaceTintColor:	@FBL_2		# Tint for backfacing polys, when on
+BackfaceTintAlpha:	ALPHA 0.45	# Tint Blend for backfacing polys
+
+WireframeColor:		1.0 0.5 0	# non-selected primitives
+
+SelectedPrimColor:      @FYE	# selected primitives
+AuxSelectedPrimColor1:	@FRE	# selected primitives in first tmp. sel
+AuxSelectedPrimColor2:	@FCY_2	# selected primitives in second tmp. sel
+
+UsdSelectedPrimitiveAlpha: ALPHA 0.2		# selected USD prims
+UsdModifiedPrimitiveColor: 0.00 1.00 1.00	# current state modified USD prims
+UsdModifiedPrimitiveAlpha: ALPHA 0.2		# current state modified USD prims
+
+CookSelectColor:	    0.90 0.60 0.00  # points/primitives in cook selection
+PrimClosureColor:	    0.15 0.40 0.25	# primitives when in closure (not sel'd)
+AuxGeoColor:		    @FOR_2			# spline and quadric hulls
+SelectedAuxGeoColor:	0.90 1.60 0.70	# selected spline and quadric hulls
+ProfileWireColor:	    0.6  0.55 0.50  # profiles
+
+AxesColor:		    @FRE	# coordinate  or c-plane axes
+XaxesColor:		    @FRE    # sticky x axis
+YaxesColor:		    @FGR    # sticky y axis
+ZaxesColor:		    @FBL	# sticky z axis
+SelectedAxesColor:	@FRE	# selected coordinate axes
+
+PrimInfoColor:		    @FMA    # prim-vtx, prim-num, prim-normal 
+SelectedPrimInfoColor:	@FPU_2	# sel'd prim-vtx, prim-num, prim-normal
+SelectedPointColor:	    @FYE	# selected points and point info
+
+Guide1Color:		@FMA	# 1st guide geometry
+Guide2Color:		@FCY	# 2nd guide geometry
+
+CplaneColor:			@TX_3	# non-selected construction plane
+ActiveCplaneColor:		@FOR	# non-selected active construction plane
+SelectedCplaneColor:	@FYE	# selected construction plane
+CplaneAlpha:		    ALPHA 0.5 	# amount of shading between grid lines
+CplaneLineAlpha:	    ALPHA 0.5	# alpha of cplane grid lines
+CplaneLineFadedAlpha:	ALPHA 0.15	# alpha of faded cplane grid lines
+
+
+HeightVectorColor:	1.00 0.50 0.50	# height motion indicator
+HandleColor:		@FBL	# handle for direct manip.
+InactiveHandleColor: @TX_3	# dimmed handle when not active
+PickedHandleColor:	@FOR_2	# picked handle widget for direct manip.
+SelectedHandleColor: @FYE	# selected handle
+PeanutColor:		1.00 0.45 0.07	# peanut color for orientation picking
+LabelColor:			0.00 0.80 0.80	# overlay labels in view
+SelectedLabelColor:	0.80 0.80 0.00	# labels in the selected viewport
+
+PillTextColor:		@TX  # menu pill text color
+PillOutlineColor:	@FBL_2  # menu pill outline
+PillBGColor:		@UI  # menu pill background
+PillBGAlpha:		ALPHA 1.5	# menu pill background alpha
+PillCamLockTextColor:    	@TX     # menu pill text color when cam is locked
+PillCamLockBGColor:      	@FRE    # menu pill bg when camera is locked
+PillCamLockOutlineColor: 	@UI     # menu pill outline when camera is locked
+SelectedPillTextColor:   	0.80 0.80 0.65  # menu pill text color (selected vp)
+SelectedPillOutlineColor:	0.55 0.55 0.55  # menu pill outline (selected viewport)
+SelectedPillBGColor:     	0.15 0.15 0.15  # menu pill background (selected vp)
+SelectedPillBGAlpha:     	ALPHA 0.2       # menu pill background alpha (selected)
+
+SnapshotColor:			0.6  0.6  0.6   # viewport snapshot color		
+OverlayLabelColor:		1.00 0.00 1.00	# overlay labels in view
+AuxOverlayLabelColor:	0.80 0.80 0.00	# auxiliary overlay labels in view
+
+# h20
+HandleXAxisColor: @FRE
+HandleYAxisColor: @FGR
+HandleZAxisColor: @FBL 
+
+HandlePivotColor:	        @FPU	# the pivot of handles
+HandleAxisColor:	        0.00 1.00 1.00	# axis lines for the handle
+HandlePlaneAxisColor:	    0.60 0.03 0.60	# axis lines for the handle
+HandleViewAxisRotateColor:	@FPU	# outer rotate ring for handle
+HandleTumbleSphereColor:	@UI	# tumble sphere color for handle
+HandleBendColor:            0.10 0.90 0.10  # bend handle color
+HandleTwistColor:	        1.00 1.00 0.20	# twist handle color
+HandleTracerColor:	        @TX_3	# tracers drawn by dragged handle
+HandleDeltaTextColor:	    @FOR	# text delta values
+HandleDeltaTextShadowColor:	@BG	# text shadow for delta values
+HandleDeltaTextAlpha:	    ALPHA     1.0	# opacity of delta text values
+
+CPlaneHandleXlateColor:     @FPU_2  # translate axes of c-plane handle
+CPlaneHandleRotateColor:    1.00 0.15 0.25 # rotate portion on c-plane handle
+CPlaneHandleBorderColor:    @FPU_2 # scale border on c-plane handle
+
+OrthoGridColor:		        @GridColor	# ortho viewport grid lines
+OrthoGridOriginColor:	    1.30 0.30 0.30	# ortho viewport origin lines
+
+UVGridColor:		        @GridColor	# uv viewport grid lines
+UVGridOriginColor:	        @TX_3	# uv viewport origin lines
+UVGridBoundaryColor:	    @TX_3	# uv viewport boundary lines
+
+ObjectSelectColor:	    @FOR_2	# object selection highlight color
+ObjectCurrentColor:	    @FYE	# current object highlight color
+ObjectSelectHintColor:	@FBL_2	# object selection hint highlight color
+ObjectGhostColor:	    @TX_3   # color blended into object when ghosted
+ObjectGhostAlpha:	    ALPHA 0.35	# alpha for color/ghost mixing
+
+UVBackFaceFillColor:	        @FPU_2  # fill color for back facing polys
+UVOverlapFillColor:	            @FRE	# fill color for overlapping UV areas
+UVOverlapFillAlpha:	            ALPHA 0.70	# alpha for overlapping UV areas
+UVFillAlpha:		            ALPHA 0.10	# fill alpha for front facing polys
+SelectedUVBackFaceFillColor:	@FYE  # the selected version
+
+IKCriticalZoneColor:	0.98 0.35 0.20	# inv. kin. danger zone cone
+
+TextColor:          @TX		# viewport text 
+TextShadowColor:	@BG_2   # viewport text dropshadow
+GeoWarningColor:	@FOR	# indicates a potential problem
+
+LocateColor:		@FOR	# mouse locate overlay color 
+LocateAlpha:		ALPHA	0.4   # mouse locate overlay alpha
+LocateNearColor:	@FGR	# mouse locate nearby color 
+LocateNearAlpha:	ALPHA	0.4   # mouse locate nearby alpha
+
+PrimLocateColor:        @FOR # 0.4 0.75 1.0    # mouse locate prim color 
+PrimLocateRemoveColor:  @FRE # 0.95 0.30 0.30  # mouse locate prim color 
+PrimLocateToggleColor:  @FPU # 0.5 0.15 0.6    # mouse locate prim color 
+PrimLocateAlpha:        ALPHA     0.5   # mouse locate prim overlay alpha
+
+PointLocateColor:       @FYE # 0.6 0.9 1.0 # mouse locate point color 
+PointLocateRemoveColor: @FRE # 1.0 0.10 0.10   # mouse locate point color 
+PointLocateToggleColor: @FPU # 0.7 0.3 0.6 # mouse locate point color 
+PointLocateAlpha:       ALPHA     1     # mouse locate point overlay alpha
+
+EdgeLocateColor:        @FYE # mouse locate edge color 
+EdgeLocateRemoveColor:  @FRE # mouse locate edge color 
+EdgeLocateToggleColor:  @FPU # mouse locate edge color 
+EdgeLocateAlpha:        ALPHA   1 # mouse locate edge overlay alpha
+
+VertexLocateColor:          @FYE # 0.6 0.9 1.0    # mouse locate vertex color 
+VertexLocateRemoveColor:    @FRE # 1.0 0.10 0.10  # mouse locate vertex color 
+VertexLocateToggleColor:    @FPU # 0.7 0.3 0.6    # mouse locate vertex color 
+VertexLocateAlpha:          ALPHA   1             # mouse locate vertex overlay alpha
+
+BreakpointLocateColor:       @FPU			# mouse locate breakpoint color 
+BreakpointLocateRemoveColor: 1.0 0.30 0.30	# mouse locate breakpoint color 
+BreakpointLocateToggleColor: 0.7 0.3 0.6	# mouse locate breakpoint color 
+BreakpointLocateAlpha:       ALPHA     0.2     # mouse locate breakpoint overlay alpha
+HandleLocateColor:	         0.7  0.7  0.5   # glow around mouse located handle part
+HandleLocatePassiveColor:    0.3  0.3  0.65  # passive glow around mouse located handle part
+HandleLocateAlpha:	         ALPHA     0.6 	# opacity of handle locate glow
+HandleAxisLocateAlpha:	     ALPHA     0.5 	# opacity of handle axis locate glow
+HandleTumbleSphereAlpha:	 ALPHA     0.25  # opacity of handle tumble sphere
+HandleTracerFillAlpha:	     ALPHA     0.7	# opacity of filled handle tracers
+
+SelectBoxOutline: 	@FYE	# selection box outer outline
+SelectBoxInnerLine: @FOR_2	# selection box inner outline
+SelectBoxFill:		@FOR	# selection box shaded fill
+SelectBoxAlpha:		ALPHA	0.15  # selection box fill alpha
+ 
+SliderKnobMaxColor:	@FYE	# slider handle max value warning 
+ObjectNameColor:	@FRE	# color for object name guides
+PointTrailColor:	0.00 0.58 0.58	# non-selected point trails
+SelectedPointTrailColor: 0.80 0.30 0.30	# selected point trails
+
+FlattenPinColor:	@FRE	# UV Flatten state pin color
+FlattenSelectedPinColor: 1.0 1.0 0.0	# UV Flatten state selected pin color
+FlattenInitialPinColor:  0.7 0.0 0.0	# UV Flatten state initial pin color
+BoundaryColor:		@FBL_2	# Geometry boundary decoration
+EdgeTipColor:		@FGR	# Edge selection direction indicator
+ViewPivotFGColor:	@FRE	# View pivot indicator colors, with 
+ViewPivotBGColor:	@FRE	# BG ignored if same as FG.
+BBoxOutlineColor:	@TX_3 	# Bounding box wireframe color
+BBoxOutlineAlpha:	ALPHA 0.75	# Bounding box wireframe alpha (*approx)
+BBoxSolidColor:		@UI_2 	# Bounding box wireframe color
+BBoxSolidAlpha:		ALPHA 0.75	# Bounding box shaded alpha (approx*)
+
+RenderBorderColor:	0.40 0.40 0.40  # Render Region border (located)
+RenderInactiveBorderColor: 0.05 0.05 0.05 # Render Region border (not located)
+RenderTextColor:	@FPU #@TX_2  # Render Region heading text
+RenderLocateColor:	0.6 0.3 0.2	# Render Region part locate color
+RenderBarColor:		0.15 0.15 0.15	# Render Region title bar bg color
+
+
+MessageColor:		@TX     # color of normal-priority messages
+PromptColor:		@FBL	# color of tool prompts
+WarningColor:		@FOR	# color of warning messages
+ErrorColor:		    @FRE	# color of error messages
+SuccessColor:		@FGR	# color of success indication
+FlashMessageColor:	@PAPER	# color of flash messages
+
+OverlayBackgroundColor:	@BG_2	    # Background of group list
+OverlayBackgroundAlpha:	ALPHA 0.75	# Alpha for background of group list
+
+OverviewViewRegionColor:	    0.7 0.7 0.7	# View region rectangle
+OverviewWinRegionColor:		    1.0 1.0 0.0	# Window region rectangle
+OverviewNominalWinRegionColor:	0.4 0.4 1.0	# Nom. window region rectangle
+
+LopIncludeBoxGuide:		0.40 0.40 1.00	# LOP guide for "include" bbox
+LopExcludeBoxGuide:		1.00 0.40 0.40	# LOP guide for "exclude" bbox
+LopSubnetGuide1:		0.40 0.40 1.00	# LOP subnet first guide
+LopSubnetGuide2:		1.00 0.40 0.40	# LOP subnet second guide
+LopSubnetGuide3:		0.40 1.00 0.40	# LOP subnet third guide
+
+# *approx: uses sample-based opacity. Will be rounded to 1/AA_level, where
+# AA_level is the antialias-level of the framebuffer. Higher values will 
+# give more accurate opacity. The default 4x AA gives 0, 0.25, 0.5, 0.75, 1.
