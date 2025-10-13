@@ -1,0 +1,7 @@
+{
+    "node_scripts": {
+    },
+    "general_scripts": [
+        "every_node.py"
+    ]
+}
