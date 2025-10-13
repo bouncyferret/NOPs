@@ -1,4 +1,4 @@
-![NOPS Icon](icon.jpeg)
+![NOPS Icon](new_icon.png)
 # Nightmare OPerators
 ## Make NOPstimal use of your time in Houdini!
 
@@ -36,5 +36,7 @@ We'll let you explore what NOPs has to offer but know that NOPs has a main menu 
 NOPs is an april's fool idea by _BouncyFerret_ and _WaffleBoyTom_.
 
 Feel free to let us know how we can improve NOPs !
+
+Shout-out to Ferry Taswin for creating the custom node shapes : https://ferrytaswin.gumroad.com/
 
 Thank you for reading this and using NOPs < 3
