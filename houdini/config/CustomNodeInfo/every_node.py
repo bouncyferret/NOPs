@@ -37,7 +37,7 @@ if nut.IsBannedNode(node):
     addTag(
         "Marked For Deletion. Use Better Nodes...",
         color = theme.error,
-        textColor = theme.success,
+        textColor = theme.teal,
         symbol = "flying-saucer",
         symbolSize = theSymbolSize
     )
