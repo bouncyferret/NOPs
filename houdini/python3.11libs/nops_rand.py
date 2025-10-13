@@ -7,6 +7,16 @@ import hou
 
 #utility functions to generate random numbers
 
+def GetRandomFloat(seed: int = 68) -> float:
+    
+    nanoseconds: int = time.monotonic_ns()
+    
+    now:int = nanoseconds
+    rng = np.random.default_rng(now + seed)
+    return rng.random()
+
+
+
 def GetRandomSeed(seed:int = 9, slow:int = 10) -> int:
 
     # increasing slow means slower change in seed value

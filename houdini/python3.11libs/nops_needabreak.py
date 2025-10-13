@@ -4,11 +4,11 @@ import nops_utils as nut
 from sys import platform
 from typing import List
 
-def AnnoyingCook() -> None:
+def AnnoyingCook(always=False) -> None:
 
     hard: float = nut.LoadDifficulty() * 0.25
     
-    if not nr.RandomTrigger(hard):
+    if not nr.RandomTrigger(hard) and not always:
         
         return 
     

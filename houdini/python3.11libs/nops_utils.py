@@ -1,8 +1,10 @@
 import hou
+import csv
 import os
 import json
 from hutil.PySide import QtCore
 from typing import Callable, Dict, Any
+from nops_constants import Category, Context
 
 class TimeWizard(QtCore.QTimer):
 
@@ -80,3 +82,66 @@ def TemporaryMessage(message: str, duration: float = 4, severity: int = 0) -> No
         hou.ui.setStatusMessage(message, severity=hou.severityType.Error)
 
     ScheduleFunction(duration, lambda: hou.ui.setStatusMessage(""))
+
+
+def CategoryToContext(cat: str) -> str:
+    """
+    This is dumb as hell ...
+    This is so awful lol
+    """
+    match cat:
+        case Category.OBJ.value:
+            return Context.OBJ.value
+        
+        case Category.SOP.value:
+            return Context.SOPS.value
+
+        case Category.CHOP.value:
+            return Context.CHOPS.value
+
+        case Category.VOP.value:
+            return Context.VOPS.value
+
+        case Category.SHOP.value:
+            return Context.SHOPS.value
+
+        case Category.COP2.value:
+            return Context.COPS2.value
+
+        case Category.COP.value:
+            return Context.COPS.value
+
+        case Category.DOP.value:
+            return Context.DOPS.value
+
+        case Category.TOP.value:
+            return Context.TOPS.value
+
+        case Category.ROP.value:
+            return Context.ROPS.value
+
+        case Category.LOP.value:
+            return Context.LOPS.value
+
+        case _:
+            return "unknown"
+
+
+def GetBannedNodes() -> list[str]:
+    basepath: str = hou.getenv("NOPS")
+    list_banned_nodes: list[str] = []
+    if basepath is not None :
+
+        path_to_csv: str = os.path.join(
+            basepath,
+            "csvs/nodes_to_destroy.csv"
+        )
+    
+        with open(path_to_csv,newline='')as csvfile:
+            reader: csv.Reader = csv.reader(csvfile)
+            list_banned_nodes: List[str] = [row[0] for row in reader]
+    return list_banned_nodes
+
+def IsBannedNode(node: hou.Node) -> bool:
+    return node.type().name() in GetBannedNodes()
+

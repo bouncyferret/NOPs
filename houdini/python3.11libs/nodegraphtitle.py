@@ -11,7 +11,7 @@ def networkEditorTitleLeft(editor):
     try:
         index: int = nut.LoadDifficultyIndex()
         
-        title = f"Pain level: {theDifficulties[index]}\r\nNode Count: {len([n for n in hou.node('/').allSubChildren()])}"
+        title = f"Pain level: {theDifficulties[index]['label']}\r\nNode Count: {len([n for n in hou.node('/').allSubChildren()])}"
         pwd = editor.pwd()
         playerparm = pwd.parm('isplayer')
         if playerparm is not None and playerparm.evalAsInt() != 0:
@@ -38,7 +38,7 @@ def networkEditorTitleRight(editor):
 
         title_tuple = theContextPrompts.get(
             label, 
-            ("ASSERT ! ASSERT !", "OH GOD, WHAT HAPPENED !!", "WHERE ARE YOU ???")
+            theContextPrompts["unknown"]
         )
         title += title_tuple[nr.ChooseFromStringArray(title_tuple)]
     

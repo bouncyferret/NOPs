@@ -1,6 +1,29 @@
 from enum import StrEnum
 from typing import List
 
+
+# neither of these is in alphabetical order
+# because [insert good reason here] and not because
+# of pure laziness...
+# this is also stupid and should be part of that big dictionary
+# I don't want to refactor
+# but this is even worse lmfao
+
+class Category(StrEnum):
+    OBJ = "object"
+    SOP = "sop"
+    CHOP = "chop"
+    VOP = "vop"
+    TOP = "top"
+    COP = "cop"
+    MANAGER = "manager"
+    COP2 = "cop2"
+    ROP = "rop"
+    SHOP = "shop"
+    DOP = "dop"
+    LOP = "lop"
+    
+
 class Context(StrEnum):
     OBJ = "objects"
     CHOPS = "motion fx"
@@ -14,6 +37,7 @@ class Context(StrEnum):
     SHOPS = "shaders"
     ROPS = "outputs"
     APEX = "apex"
+    UNKNOWN = "unknown"
 
 
 theContextPrompts: dict = {
@@ -63,13 +87,38 @@ theContextPrompts: dict = {
     
     Context.APEX.value   : ("What kind of context are you in ??!",
                             "APEXcellent",
-                            "You clearly have no fear")
+                            "You clearly have no fear"),
+
+    Context.UNKNOWN.value: ("ASSERT ! ASSERT !", 
+                            "OH GOD, WHAT HAPPENED !!", 
+                            "WHERE ARE YOU ???")
 }
 
-theDifficulties: List[str] = [
-    "Ouch !",
-    "Very Ouch !", 
-    "Nightmare !", 
-    "Traumatize me !"
+theDifficulties: List[dict] = [
+    {
+        "label" : "Ouch !",
+        "icon"  : "magic-wand",
+    },
+    {
+        "label" : "Very Ouch !",
+        "icon"  : "meteor"
+    },
+    {
+        "label" : "Nightmare !",
+        "icon"  :  "cross"
+    },
+    {
+        "label" : "Traumatize me !",
+        "icon"  : "axe"
+    }
 ]
 
+theSymbolSize: int = 38
+
+theCoolNodes: List[str] = [
+    "invokegraph",
+    "apex::invokegraph",
+    "invoke",
+    "compile_begin",
+    "compile_end"
+]
