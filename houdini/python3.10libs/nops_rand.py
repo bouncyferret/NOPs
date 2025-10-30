@@ -24,7 +24,9 @@ def GetRandomList(size:int = 3) -> List:
 
 
 def RandomTrigger(probability:float = 0.1,seed:int = 6) -> bool:
-
+    if hou.ui.isUserInteracting():
+        return False
+    
     seed: int = GetRandomSeed(seed)
     
     value: float = np.random.default_rng(seed=seed).random()
