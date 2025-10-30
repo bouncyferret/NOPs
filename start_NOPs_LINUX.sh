@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# add check to see if hfs20.0 exists.
-cd /opt/hfs20.0/
+# Only h21+ is supported.
+cd /opt/hfs21.0/
 source ./houdini_setup_bash
 cd -
 
