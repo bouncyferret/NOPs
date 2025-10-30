@@ -1122,3 +1122,23 @@ UsdPrimModified:            0.30 0.80 0.80
 UsdPrimModifiedAlpha:       0.4
 UsdChildPrimModified:       0.15 0.40 0.40
 UsdChildPrimModifiedAlpha:  0.4
+
+
+// The following colors are for Cop input/output labels
+CopInOutIntColor:		    #ff9100
+CopInOutFloatColor:		    #ff9100
+CopInOutVector2Color:		#ff9100
+CopInOutVectorColor:		#ff9100
+CopInOutVector4Color:		#ff9100
+CopInOutGeometryColor:		#ff9100
+
+CopInOutIntVDBColor:		#ff9100
+CopInOutFloatVDBColor:		#ff9100
+CopInOutVectorVDBColor:		#ff9100
+
+CopInOutMetadataColor:		#ff9100
+CopInOutUndefColor:		    #ff9100
+
+CopInOutCableColor:		    #ff9100
+CopInOutCableInnerColor:	#ff9100
+CopInOutCablePlugColor:		#ff9100
