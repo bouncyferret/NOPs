@@ -3,7 +3,7 @@ import hou
 import nodegraphprefs as prefs
 import nops_utils as nut
 import nops_rand as nr 
-from nops_constants import theContextPrompts, theDifficulties
+from nops_constants import theContextPrompts, theDifficulties, Context
 from typing import List
 from enum import StrEnum
 
@@ -34,7 +34,12 @@ def networkEditorTitleRight(editor):
     try:
         title = ''
         pwd = editor.pwd()
-        label: str = pwd.childTypeCategory().label().lower()
+        label: str = ""
+        if pwd: 
+            label = pwd.childTypeCategory().label().lower()
+        else: # we're in the apex editor
+            label = Context.APEX.value
+            
 
         title_tuple = theContextPrompts.get(
             label, 

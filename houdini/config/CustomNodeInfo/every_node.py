@@ -78,6 +78,8 @@ addTag(
 
 
 # add some marker of something ?
+# these are fuckin broken in 22 ..
+# so sad
 fun_amount = nr.GetRandomFloat()
 other_fun_amount = nr.GetRandomFloat(654)
 description = "Looks Like You're Struggling" if fun_amount < 0.5 else "Hell Yeah !" 

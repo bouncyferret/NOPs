@@ -9,6 +9,9 @@
 			"HOUDINI_SPLASH_FILE": "$NOPS/media/gatto1.jpg"
 		},
 		{
+			"HOUDINI_USE_NEW_UI": 1
+		},
+		{
 			"HOUDINI_SPLASH_MESSAGE": "Have Fun !!"
 		}
 	]
