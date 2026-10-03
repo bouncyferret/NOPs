@@ -1,6 +1,7 @@
 import hou
 import nops_rand as nr
 import nops_utils as nut
+import nops_uiscrambler as nui
 from sys import platform
 from typing import List
 
@@ -53,6 +54,8 @@ def AnnoyingCook(always=False) -> None:
 
             percent = float(i) / float(10)
             operation.updateProgress(percent)
+
+        nui.SetRandomColorTheme()
 
 
             
